@@ -41,3 +41,12 @@ let bool2 = Boolean(isLoggedIn1);
 console.log(typeof bool2);  // boolean
 console.log(bool2);  // true
 
+
+
+////////////////////////////////  operations ////////////////////////////////////
+
+ console.log("1" + 2); //12
+ console.log(1 + "2");  //12
+ console.log("1" + 2 + 2);  //122 if string first then everything converted to string
+ console.log(1 + 2 + "2");  // 32  if if string at last then other operations will performed first then converted to string in this case first addition then concatenation
+ 
