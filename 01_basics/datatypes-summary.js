@@ -31,3 +31,31 @@ fun();
 console.log(typeof fun); // function or function object
 console.log(typeof obj);  // object
 console.log(typeof heros);  // object because arrays are objects only in js
+
+
+////////////////  memory in js //////////
+
+// Stack(Primitive), Heap(Non-primitive)
+
+let myName = "Suyash"
+
+let anotherName = myName  // we get copy of myName which is stored in anotherName so if we change value of anotherName then it will not change the original value stored in myName
+anotherName = "Rishabh"
+
+console.log(anotherName); // Rishabh
+console.log(myName);  // Suyash
+// They are primitive datatypes so if we change value of anotherName  then value of anotherName change only not myName
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@sbi"
+}
+
+let userTwo = userOne // userTwo refer to userOne so if we make changes in any of one then it will show changes in both objects because address is same
+
+userTwo.email = "usertwo@gmail.com";
+
+console.log(userOne.email); // usertwo@gmail.com
+console.log(userTwo.email);  // usertwo@gmail.com
+
+// Reference datatypes use heap so both refer to same address so changes will occur in both objects
